@@ -1,0 +1,23 @@
+# Server Variables
+NODE_ENV = development
+DOMAIN_NAME = localhost:3443
+HTTPS_PORT = 3443
+MONGODB_URI = mongodb://localhost/Hackathon2018
+LOG_LEVEL = info
+SENDGRID_API_KEY =
+EMAIL_SENT_FROM = donotreply@nationwide.com
+
+# Team Variables
+REGISTRATION_OPENS = May 1, 2018 12:00:00
+REGISTRATION_CLOSES = JulY 18, 2018 12:00:00
+TSHIRT_SIZE_LOCKS = JulY 18, 2018 00:00:01
+EDIT_TEAM_LOCKS = JulY 18, 2018 00:00:01
+USE_WAITLIST = false
+MIN_MEMBER_COUNT = 3
+MAX_MEMBER_COUNT = 6
+MAX_TEAM_COUNT = 50
+
+# User Variables
+EMPLOYMENT_TYPES = FTE,Contractor,Intern
+TSHIRT_SIZES = XS,S,M,L,XL,XXL
+LOCATIONS = Columbus,Harleysville,Des Moines,Scottsdale
