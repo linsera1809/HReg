@@ -1,0 +1,3 @@
+{"level":"info","message":"HTTPS Server Started Fri Mar 23 2018 14:14:47 GMT-0400 (Eastern Daylight Time)","timestamp":"Fri Mar 23 2018 14:14:47 GMT-0400 (Eastern Daylight Time)"}
+{"level":"info","message":"Listening on port 3443","timestamp":"Fri Mar 23 2018 14:14:47 GMT-0400 (Eastern Daylight Time)"}
+{"level":"error","message":"MongoDB connection error:MongoNetworkError: failed to connect to server [localhost:27017] on first connect [MongoNetworkError: connect ECONNREFUSED 127.0.0.1:27017]","timestamp":"Fri Mar 23 2018 14:14:49 GMT-0400 (Eastern Daylight Time)"}
