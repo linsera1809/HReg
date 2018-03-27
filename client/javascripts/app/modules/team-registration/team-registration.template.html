@@ -1,0 +1,66 @@
+<form id="team-registration">
+  <p class="error" ng-repeat="(key, value) in $ctrl.error">{{value}}</p>
+  <!-- Team Name -->
+  <label for="team-name">Team Name</label>
+  <input id="team-name" type="text" ng-model="$ctrl.team.teamName">
+  <br>
+  <br>
+
+  <!-- Member 1 -->
+  <label for="member1">Member 1 Email Address</label>
+  <input id="member1" type="text" ng-model="$ctrl.team.members[0]">
+  <br>
+  <br>
+
+  <!-- Member 2 -->
+  <label for="member2">Member 2 Email Address</label>
+  <input id="member2" type="text" ng-model="$ctrl.team.members[1]">
+  <br>
+  <br>
+
+  <!-- Member 3 -->
+  <label for="member3">Member 3 Email Address</label>
+  <input id="member3" type="text" ng-model="$ctrl.team.members[2]">
+  <br>
+  <br>
+
+  <!-- Member 4 -->
+  <label for="member4">Member 4 Email Address</label>
+  <input id="member4" type="text" ng-model="$ctrl.team.members[3]">
+  <br>
+  <br>
+
+  <!-- Member 5 -->
+  <label for="member5">Member 5 Email Address</label>
+  <input id="member5" type="text" ng-model="$ctrl.team.members[4]">
+  <br>
+  <br>
+
+  <!-- Member 6 -->
+  <label for="member6">Member 6 Email Address</label>
+  <input id="member6" type="text" ng-model="$ctrl.team.members[5]">
+  <br>
+  <br>
+
+  <!-- App Idea -->
+  <label for="app-idea">App Idea</label>
+  <textarea id="app-idea" ng-model="$ctrl.team.appIdea"></textarea>
+  <br>
+  <br>
+
+  <!-- Technology -->
+  <label for="technology">Technology</label>
+  <textarea id="technology" ng-model="$ctrl.team.technology"></textarea>
+  <br>
+  <br>
+
+  <!-- Computing Platform -->
+  <label for="computing-platform">Computing Platform</label>
+  <textarea id="computing-platform" ng-model="$ctrl.team.platform"></textarea>
+  <br>
+  <br>
+
+  <button ng-click="$ctrl.registerTeam()">Register Team</button>
+
+  <p ng-if="$ctrl.message">{{$ctrl.message}}</p>
+</form>

@@ -1,0 +1,171 @@
+$defaultFont: 'Montserrat', 'Segoe UI',  sans-serif;
+$mainBackgroundColor: #090a26;
+$accentColor: #353382;
+$lightAccentColor: #4440a5;
+$hackRed: #ea2127;
+$hackOrange: #f27921;
+$hackYellow: #fbed1d;
+$hackGreen: #00a44f;
+$hackLightBlue: #28aae1;
+$hackDarkBlue: #3752a3;
+$hackPurple: #921d59;
+
+/* =============================================== */
+/* @Font-Face Styles                               */
+/* =============================================== */
+
+/* Default Font
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat/Montserrat-Light.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat/Montserrat-LightItalic.ttf');
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat/Montserrat-SemiBold.ttf');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat/Montserrat-SemiBoldItalic.ttf');
+  font-weight: bold;
+  font-style: italic;
+}
+
+/* Hackathon Font
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+@font-face {
+  font-family: 'Bender-Solid';
+  src: url('../fonts/Bender/Bender-Solid.otf');
+}
+@font-face {
+  font-family: 'Bender-Thin';
+  src: url('../fonts/Bender/Bender-Thin.otf');
+}
+
+/* =============================================== */
+/* Font Size Styles                                */
+/* =============================================== */
+
+/** NOTE
+ * html font size is set to 62.5% so that all the REM measurements are
+ * based on 10px sizing. 1.5rem = 15px
+ */
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+}
+main {
+  /* Fix IE11 bug where the 'main' element is not a block element */
+  display: block;
+}
+h1, h2, h3, h4, h5, h6 {
+  margin: 0px;
+  font-weight: normal;
+}
+h1 {
+  font-size: 4.8rem;
+}
+h2 {
+  font-size: 3.6rem;
+}
+h3 {
+  font-size: 2.8rem;
+}
+h4 {
+  font-size: 1.8rem;
+}
+h5 {
+  font-size: 1.6rem;
+}
+h6 {
+  font-size: 1.6rem;
+}
+
+/* =============================================== */
+/* Base Styles                                     */
+/* =============================================== */
+html {
+  height: 100%;
+}
+body {
+  background-color: $mainBackgroundColor;
+  background-attachment: fixed;
+  height: 100%;
+  font-family: $defaultFont;
+  overflow-x: hidden;
+}
+main {
+  z-index: 5;
+}
+main h1 {
+  color: white;
+}
+#main-background-overlay {
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("/images/main-background.png") repeat;
+  background-position: top center;
+  opacity: 0.30;
+}
+
+/* =============================================== */
+/* Global Classes                                  */
+/* =============================================== */
+.hackathon-font {
+  font-family: 'Bender-Solid', $defaultFont;
+}
+.hackathon-thin-font {
+  font-family: 'Bender-Thin', $defaultFont;
+}
+
+/* =============================================== */
+/* Form Styles                                     */
+/* =============================================== */
+button {
+  cursor: pointer;
+  height: 40px;
+  border: 2px solid white;
+  border-radius: 5px;
+  padding: 0 30px;
+  background: $accentColor;
+  text-align: center;
+  color: white;
+}
+button:hover {
+  background: $lightAccentColor;
+}
+button:active {
+  background: $accentColor;
+}
+button:focus {
+  outline: 0;
+}
+
+/* =============================================== */
+/* Countdown Styles                                */
+/* =============================================== */
+#countdown {
+  background: #353382 !important;
+}
+#countdown .number {
+  font-family: 'Bender-Solid';
+}
+#countdown .colon {
+  font-family: 'Bender-Solid';
+}

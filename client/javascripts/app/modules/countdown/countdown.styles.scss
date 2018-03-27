@@ -1,0 +1,28 @@
+#countdown {
+  display: flex;
+  border: 4px solid white;
+  padding: .5vh .5vh 1.8vh .5vh;
+  background: black;
+  color: white;
+}
+#countdown > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+#countdown > div:nth-child(odd) {
+  width: 9vw;
+}
+#countdown .number {
+  margin: 0px 20px;
+  font-size: 11vh;
+}
+#countdown .text {
+  font-weight: bold;
+  font-size: 2vh;
+}
+#countdown .colon {
+  margin-top: 5px;
+  font-size: 11vh;
+}

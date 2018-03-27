@@ -1,0 +1,80 @@
+<form>
+  <p class="error" ng-repeat="(key, value) in $ctrl.error">{{value}}</p>
+
+  <!-- First Name -->
+  <label for="first-name">First Name</label>
+  <input id="first-name" type="text" ng-model="$ctrl.user.firstName">
+  <br>
+  <br>
+
+  <!-- Last Name -->
+  <label for="last-name">Last Name</label>
+  <input id="last-name" type="text" ng-model="$ctrl.user.lastName">
+  <br>
+  <br>
+
+  <!-- Email -->
+  <label for="email">Nationwide Email</label>
+  <input id="email" type="text" ng-model="$ctrl.user.email">
+  <br>
+  <br>
+
+  <!-- Cell Phone -->
+  <label for="cell">Cell Phone</label>
+  <input id="cell" type="text" ng-model="$ctrl.user.cell">
+  <br>
+  <br>
+
+  <!-- Password -->
+  <label for="signup-password">Password</label>
+  <input id="signup-password" type="password" ng-model="$ctrl.user.password">
+  <br>
+  <br>
+
+  <!-- Confirm Password -->
+  <label for="signup-confirmPassword">Confirm Password</label>
+  <input id="signup-confirmPassword" type="password" ng-model="$ctrl.user.confirmPassword">
+  <br>
+  <br>
+
+  <!-- T-Shirt Size -->
+  <label for="tshirt">T-Shirt Size</label>
+  <select id="tshirt" ng-options="size for size in $ctrl.tshirtSizes" ng-model="$ctrl.user.tshirt"></select>
+  <br>
+  <br>
+
+  <!-- Team Role -->
+  <label for="team-role">Team Role</label>
+  <input id="team-role" type="text" ng-model="$ctrl.user.role">
+  <br>
+  <br>
+
+  <!-- Dietary Restrictions -->
+  <label for="diet">Dietary Restrictions</label>
+  <textarea id="diet" ng-model="$ctrl.user.diet"></textarea>
+  <br>
+  <br>
+
+  <!-- Terms and Conditions -->
+  <p>
+    I understand that in order for me to participate in the Hackathon I must
+    be a member of a completely registered team. Creating an account DOES NOT
+    register me for the Hackathon.
+  </p>
+  <input type="checkbox" id="terms" ng-model="$ctrl.user.terms"><label for="terms"> I Agree</label>
+  <br>
+  <br>
+
+  <button ng-click="$ctrl.signup()">Create Account</button>
+  <p ng-if="$ctrl.message">{{$ctrl.message}}</p>
+</form>
+<br>
+<br>
+<h5>Password Requirements</h5>
+<p>Passwords must be a minimum of 8 characters long and contain 3 of following 4</p>
+<ol>
+  <li>Lower Case Letter</li>
+  <li>Uperr Case Letter</li>
+  <li>Number</li>
+  <li>Special Character: ! @ # $ % ^ &amp; * ( ) + = . _ - </li>
+</ol>
