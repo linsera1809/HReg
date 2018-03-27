@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <title><%= title %></title>
+    <meta name="description" content="Hackathon Registration Web Application">
+    <meta name="author" content="Robert Linse, Samuel Maddox, Jordan Nyerges">
+    <link rel='stylesheet' href='/stylesheets/styles.min.css'>
+    <link rel='stylesheet' href='/stylesheets/pages/<%= page %>.css'>
+  </head>
+  <body ng-app="hackathonRegistrationApp">
+    <div id="main-background-overlay">
+    </div>
+    <main>
+      <%- include('partials/' + page) -%>
+    </main>
+    <script src="/javascripts/hackathonAngularApp.min.js"></script>
+  </body>
+</html>

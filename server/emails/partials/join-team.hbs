@@ -1,0 +1,50 @@
+<!-- BOBBY: VALIDATION NEEDED -->
+<table border="0" cellspacing="0" cellpadding="0">
+
+  <!-- Header -->
+  <tr>
+    <td align="center">
+      <h1 style="margin: 20px 0px;">Team Invitation</h1>
+      <hr>
+    </td>
+  </tr>
+
+  <!-- First Section -->
+  <tr>
+    <td>
+      <p style="margin-top: 20px;">Hi {{name}}!</p>
+      <p>{{sender}} has invited you to join the team, {{teamName}} for this year's Hackathon!<br>
+      <br><strong> To get started, either join the team, or create an account at <a href="https://{{domainName}}/create-account">https://{{domainName}}/create-account</a> and you can join the team later!</strong></p>
+    </td>
+  </tr>
+
+  <!-- Buttons -->
+  <tr>
+    <td align="center">
+      <a href="https://{{domainName}}/{{teamName}}/join-team" target="_blank" style="margin: 20px 0px; background-color: #353382; border-radius: 3px; color: #ffffff; text-decoration: none; padding: 12px 18px; display: inline-block;">Join Team</a>
+      <a href="https://{{domainName}}/{{teamName}}/decline-invitation?email={{memberEmail}}&hash={{declineHash}}" target="_blank" style="margin: 20px 0px; background-color: #353382; border-radius: 3px; color: #ffffff; text-decoration: none; padding: 12px 18px; display: inline-block;">Decline Invitation</a>
+    </td>
+  </tr>
+
+  <!-- Second Section -->
+  <tr>
+    <td>
+      <p style="font-size:9pt">
+        Thanks,<br>
+        The Hackathon Team
+      </p>
+    </td>
+  </tr>
+
+
+  <!-- Footer needs correct links (BL) -->
+  <tr>
+    <td align="center"><hr>
+    <p style="font-size:8px">
+         Need assistance? Want to know more about Nationwide's Hackathon? <br>
+         Find us at <a href="https://onyourside.sharepoint.com/sites/Hackathon">our SharePoint Online site</a> or follow us on <a href="https://www.yammer.com/nationwide.com/#/threads/inGroup?type=in_group&feedId=6066781">Yammer</a>
+      </p>
+  </td>
+  </tr>
+
+</table>
