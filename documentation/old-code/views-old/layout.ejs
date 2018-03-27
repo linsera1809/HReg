@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <title><%= title %></title>
+    <meta name="description" content="Hackathon Registration Web Application">
+    <meta name="author" content="Robert Linse, Samuel Maddox, Jordan Nyerges">
+    <link rel='stylesheet' href='/stylesheets/styles.min.css'>
+  </head>
+  <body ng-app="hackathonRegistrationApp">
+    <header>
+      <a href="/">
+        <img src="/images/hack17.png" width="40" height="40" alt="hackathon-logo">
+        <h1 class="hackathon-font">Hackathon 2018</h1>
+      </a>
+
+      <nav>
+        <ul>
+          <li><user-nav user-email="<%= email %>"></user-nav></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <%- include('partials/' + page) -%>
+    </main>
+    <footer>
+    </footer>
+    <script src="/javascripts/hackathonAngularApp.min.js"></script>
+  </body>
+</html>

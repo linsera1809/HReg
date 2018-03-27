@@ -1,0 +1,400 @@
+$defaultFont: 'Montserrat', 'Segoe UI',  sans-serif;
+$errorColor: #d30202;
+$progressBarSecondaryColor: #cacaca;
+$progressBarSecondaryTextColor: white;
+$progressBarPrimaryColor: black;
+$progressBarPrimaryTextColor: white;
+
+/*********************/
+/* @Font-Face Styles */
+/*********************/
+
+/* Default Font */
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat/Montserrat-Light.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat/Montserrat-LightItalic.ttf');
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat/Montserrat-SemiBold.ttf');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat/Montserrat-SemiBoldItalic.ttf');
+  font-weight: bold;
+  font-style: italic;
+}
+
+/* Hackathon Font */
+@font-face {
+  font-family: 'Bender-Solid';
+  src: url('../fonts/bender-solid.otf');
+}
+
+/*********************************/
+/* Tag Styles and global Classes */
+/*********************************/
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  font-family: $defaultFont;
+  overflow-x: hidden;
+}
+.error {
+  color: $errorColor;
+}
+.hidden {
+  visibility: hidden;
+}
+.hackathon-font {
+  font-family: 'Bender-Solid', $defaultFont;
+}
+.slide-in-right {
+  animation: slideInRight .85s;
+  animation-fill-mode: forwards;
+}
+.slide-out-right {
+  animation: slideOutRight .85s;
+  animation-fill-mode: forwards;
+}
+.slide-in-left {
+  animation: slideInLeft .85s;
+  animation-fill-mode: forwards;
+}
+.slide-out-left {
+  animation: slideOutLeft .85s;
+  animation-fill-mode: forwards;
+}
+@keyframes slideInRight {
+  from {
+    transform: translate(200%, 0%);
+  }
+  to {
+    transform: translate(0%, 0%);
+  }
+}
+@keyframes slideOutRight {
+  from {
+    transform: translate(0%, 0%);
+  }
+  to {
+    transform: translate(200%, 0%);
+  }
+}
+@keyframes slideInLeft {
+  from {
+    transform: translate(-200%, 0%);
+  }
+  to {
+    transform: translate(0%, 0%);
+  }
+}
+@keyframes slideOutLeft {
+  from {
+    transform: translate(0%, 0%);
+  }
+  to {
+    transform: translate(-200%, 0%);
+  }
+}
+
+/*****************/
+/* Header Styles */
+/*****************/
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid black;
+  padding: 10px 30px;
+}
+header a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+}
+header a:hover {
+  color: inherit;
+}
+header a h1 {
+  display: inline-block;
+  margin: 0px 0px 0px 20px;
+}
+header nav ul {
+  list-style-type: none;
+  margin: 0px;
+}
+header nav ul li {
+  margin: 0px;
+}
+
+/***************/
+/* Main Styles */
+/***************/
+main {
+  margin-top: 50px;
+  padding: 20px;
+}
+
+/***********************/
+/* Progress Bar Styles */
+/***********************/
+.progress-bar {
+  display: flex;
+  align-items: center;
+}
+.progress-bar > div{
+  display: flex;
+  align-items: center;
+}
+.progress-bar .circle-secondary {
+  display: inline-block;
+  border: 1px solid $progressBarSecondaryColor;
+  border-radius: 50%;
+  width: 23px;
+  height: 23px;
+  background-color: $progressBarSecondaryColor;
+  text-align: center;
+  color: $progressBarSecondaryTextColor;
+}
+.progress-bar .circle-primary {
+  display: inline-block;
+  border: 1px solid $progressBarPrimaryColor;
+  border-radius: 50%;
+  width: 23px;
+  height: 23px;
+  background-color: $progressBarPrimaryColor;
+  text-align: center;
+  color: $progressBarPrimaryTextColor;
+}
+.progress-bar .line-secondary {
+  display: inline-block;
+  border: 2px solid $progressBarSecondaryColor;
+  width: 100px;
+  height: 0px;
+}
+.progress-bar .line-primary {
+  display: inline-block;
+  border: 2px solid $progressBarPrimaryColor;
+  width: 100px;
+  height: 0px;
+}
+
+
+/****************************/
+/* Team Registration Styles */
+/****************************/
+
+/* All Step Styles */
+/******************************************************************************/
+#team-registration {
+  position: relative;
+  width: 100%;
+  display: block;
+}
+#team-registration li {
+  display: block;
+  list-style-type: none;
+}
+#team-registration .step {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0px auto;
+  border: 1px solid black;
+  padding: 20px;
+}
+#team-registration .step h3 {
+  text-align: center;
+}
+#team-registration .step .progress-bar {
+  justify-content: center;
+}
+#team-registration .step form {
+  margin: 0px;
+}
+#team-registration .step form nav {
+  display: flex;
+  justify-content: space-between;
+}
+#team-registration .step form nav :only-child {
+  margin-left: auto;
+}
+
+/* Step One Styles */
+/******************************************************************************/
+#team-registration .step.one {
+  max-width: 800px;
+  height: 300px;
+}
+#team-registration .step.one form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+#team-registration .step.one form .team-name {
+  margin: 0px auto;
+  width: 100%;
+  max-width: 500px;
+}
+#team-registration .step.one form .team-name input {
+  width: 100%;
+}
+
+/* Step Two Styles */
+/******************************************************************************/
+#team-registration .step.two {
+  max-width: 1200px;
+}
+#team-registration .step.two .team-members {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 50px 20px;
+}
+#team-registration .step.two .team-members .left-column li {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+#team-registration .step.two .team-members .left-column li img {
+  visibility: hidden;
+  margin-left: 7px;
+  width: 12px;
+}
+#team-registration .step.two .team-members .left-column li:hover img {
+  visibility: visible;
+}
+#team-registration .step.two .team-members .left-column li img.new-member {
+  visibility: inherit;
+  margin-left: 0px;
+  margin-right: 7px;
+}
+#team-registration .step.two .team-members .collapsable {
+  $transitionTime: .75s;
+  transition: height $transitionTime ease-out, padding $transitionTime ease-out, border $transitionTime ease-out;
+  overflow: hidden;
+}
+#team-registration .step.two .team-members .right-column {
+  border: 1px solid black;
+  padding: 20px 0px;
+  overflow: auto;
+}
+#team-registration .step.two .team-members .right-column .member-information {
+  margin: 0px 20px;
+  width: 250px;
+}
+#team-registration .step.two .team-members .right-column h6 {
+  display: flex;
+  align-items: center;
+  padding-bottom: 2px;
+  border-bottom: 1px solid black;
+}
+#team-registration .step.two .team-members .right-column h6:not(:first-child) {
+  margin-top: 20px;
+}
+#team-registration .step.two .team-members .right-column h6 img {
+  display: inline-block;
+  margin-right: 7px;
+  width: 20px;
+}
+#team-registration .step.two .team-members .right-column input {
+  width: 100%;
+}
+#team-registration .step.two .team-members .right-column select {
+  width: 100%;
+}
+#team-registration .step.two .team-members .right-column textarea {
+  width: 100%;
+  height: 50px;
+  resize: vertical;
+}
+#team-registration .step.two .team-members .right-column button {
+  float: right;
+  margin: 0px 40px 0px 0px;
+}
+
+/* Step Three Styles */
+/******************************************************************************/
+#team-registration .step.three {
+  width: 800px;
+  height: 525px;
+}
+#team-registration .step.three form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+#team-registration .step.three .team-leaders ul li {
+  list-style-type: none;
+  margin: 10px;
+  width: 200px;
+}
+#team-registration .step.three .team-leaders li button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  width: 100%;
+}
+#team-registration .step.three .team-leaders li button img {
+  margin-right: 10px;
+  margin-bottom: 6px;
+  width: 20px;
+}
+
+/* Step Four Styles */
+/******************************************************************************/
+#team-registration .step.four {
+  width: 1000px;
+}
+#team-registration .step.four .project-information {
+  display: flex;
+  justify-content: space-between;
+  margin: 50px auto;
+}
+#team-registration .step.four .project-information textarea {
+  width: 275px;
+  height: 150px;
+  resize: vertical;
+}
+
+
+/**************************************/
+/* Hackathon Registration Form Styles */
+/**************************************/
+#team-registration-form .page {
+  margin: 50px 75px;
+  padding: 20px;
+  border: 1px solid black;
+}
+#team-registration-form .team-member {
+  margin: 50px 20px;
+  padding: 10px;
+  border: 1px solid black;
+}
+#team-registration-form .team-member textarea {
+  resize: vertical;
+}
+#team-registration-form .page.three textarea {
+  width: 100%;
+  height: 150px;
+  resize: vertical;
+}

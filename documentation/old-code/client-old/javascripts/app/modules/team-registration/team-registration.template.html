@@ -1,0 +1,74 @@
+<ul id="team-registration">
+  <!-- Step One -->
+  <li class="step one" ng-class="$ctrl.stepOneClass">
+    <form>
+      <!-- Header -->
+      <div>
+        <h3>Team Registration - Step 1</h3>
+        <progress-bar num-of-steps="$ctrl.NUM_OF_STEPS" current-step="1"></progress-bar>
+      </div>
+      <!-- Team Name -->
+      <register-team-name team-name="$ctrl.teamName(name)"></register-team-name>
+      <!-- Nav -->
+      <nav>
+        <button ng-click="$ctrl.nextStep()">Next</button>
+      </nav>
+    </form>
+  </li>
+
+  <!-- Step Two -->
+  <li class="step two" ng-class="$ctrl.stepTwoClass">
+    <form>
+      <!-- Header -->
+      <div>
+        <h3>Team Registration - Step 2</h3>
+        <progress-bar num-of-steps="4" current-step="2"></progress-bar>
+      </div>
+      <!-- Team Members -->
+      <register-team-members employment-types="{{$ctrl.employmentTypes}}" locations="{{$ctrl.locations}}" tshirt-sizes="{{$ctrl.tshirtSizes}}" team-members="$ctrl.teamMembers(members)"></register-team-members>
+      <!-- Nav -->
+      <nav>
+        <button ng-click="$ctrl.prevStep()">Back</button>
+        <button ng-click="$ctrl.nextStep()">Next</button>
+      </nav>
+    </form>
+  </li>
+
+  <!-- Step Three -->
+  <li class="step three" ng-class="$ctrl.stepThreeClass">
+    <form>
+      <!-- Header -->
+      <div>
+        <h3>Team Registration - Step 3</h3>
+        <progress-bar num-of-steps="4" current-step="3"></progress-bar>
+      </div>
+      <!-- Team Leaders -->
+      <select-leaders members="$ctrl.team.members"></select-leaders>
+      <!-- Nav -->
+      <nav>
+        <button ng-click="$ctrl.prevStep()">Back</button>
+        <button ng-click="$ctrl.nextStep()">Next</button>
+      </nav>
+    </form>
+  </li>
+
+  <!-- Step Four -->
+  <li class="step four" ng-class="$ctrl.stepFourClass">
+    <form>
+      <!-- Header -->
+      <div>
+        <h3>Team Registration - Step 4</h3>
+        <progress-bar num-of-steps="4" current-step="4"></progress-bar>
+      </div>
+
+      <!-- Application Information -->
+      <get-team-app-info app-info="$ctrl.appInfo(appIdea, technology, platform)"></get-team-app-info>
+
+      <!-- Nav -->
+      <nav>
+        <button ng-click="$ctrl.prevStep()">Back</button>
+        <button ng-click="$ctrl.registerTeam()">Register Team</button>
+      </nav>
+    </form>
+  </li>
+</ul>

@@ -1,0 +1,24 @@
+<form>
+  <p class="error" ng-repeat="(key, value) in $ctrl.error">{{value}}</p>
+  <label for="email">Email</label>
+  <input id="email" type="text" ng-model="$ctrl.creds.email">
+
+  <label for="password">Password</label>
+  <input id="password" type="password" ng-model="$ctrl.creds.password">
+
+  <label for="confirmPassword">Confirm Password</label>
+  <input id="confirmPassword" type="password" ng-model="$ctrl.creds.confirmPassword">
+
+  <button ng-click="$ctrl.signup()">Create Account</button>
+  <p ng-if="$ctrl.message">{{$ctrl.message}}</p>
+</form>
+<br>
+<br>
+<h5>Password Requirements</h5>
+<p>Passwords must be a minimum of 8 characters long and contain 3 of following 4</p>
+<ol>
+  <li>Lower Case Letter</li>
+  <li>Uperr Case Letter</li>
+  <li>Number</li>
+  <li>Special Character: ! @ # $ % ^ &amp; * ( ) + = . _ - </li>
+</ol>

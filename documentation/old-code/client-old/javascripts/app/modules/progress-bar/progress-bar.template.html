@@ -1,0 +1,9 @@
+<div class="progress-bar">
+  <div class="circle-primary">1</div>
+  <div ng-repeat="i in $ctrl.steps() track by $index">
+    <div ng-if="$index+2 <= $ctrl.currentStep" class="line-primary"></div>
+    <div ng-if="$index+2 > $ctrl.currentStep" class="line-secondary"></div>
+    <div ng-if="$index+2 <= $ctrl.currentStep" class="circle-primary">{{$index + 2}}</div>
+    <div ng-if="$index+2 > $ctrl.currentStep" class="circle-secondary">{{$index + 2}}</div>
+  </div>
+</div>

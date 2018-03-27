@@ -1,0 +1,12 @@
+<form>
+  <p class="error" ng-if="$ctrl.error">{{$ctrl.error}}</p>
+  <label for="email">Email</label>
+  <input id="email" type="text" ng-model="$ctrl.creds.email">
+
+  <label for="password">Password</label>
+  <input id="password" type="password" ng-model="$ctrl.creds.password">
+
+  <button ng-click="$ctrl.login()">Login</button>
+</form>
+<a href="/forgot-password">Forgot Password</a><br>
+<a href="/signup">Create Account</a><br>

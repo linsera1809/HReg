@@ -1,0 +1,6 @@
+<div class="team-leaders">
+  <h5>Who are the team leaders?</h5>
+  <ul>
+    <li ng-repeat="member in $ctrl.members" ng-click="$ctrl.toggleLeader($index)"><button><img ng-if="member.leader" src="images/star.svg" alt="">{{member.first}} {{member.last}}</button></li>
+  </ul>
+</div>

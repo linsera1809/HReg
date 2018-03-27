@@ -1,0 +1,88 @@
+===================
+==== Use Cases ====
+===================
+1) User creates an account, DOES NOT belong to a team, registers a team.
+2) User creates an account, belongs to a team, views the team.
+3) User creates an account, DOES NOT belong to a team, later sees that they
+do belong to a team.
+4) Member does not belong to a team and many teams add them. Then they accept.
+5) User creates an account, attempts login before verify account through email
+
+=============================
+==== Server Side Backlog ====
+=============================
+- 500 internal server error ---> what to display to user, what to log
+- log any time changes made to database and who made those changes
+
+==============================
+==== Team Related Backlog ====
+==============================
+- Status of team after they register (saved, pending, confirmed, denied, warning)
+- Saved application, how do we represent this in the database?
+- Status of team member (pending, confirmed)
+- Warning, team member has left and you have too few members (notify leader &
+  members with an email and site notification), change to denied after
+- Denied email to team leader if not enough members confirmed
+- Resend email for member button
+- Notify user that a team has added them with option to confirm
+- Team lead assigns can assign new team lead (new team lead must have an account)
+- Button for user to leave a team (team lead must assign a new lead before they
+  can leave)
+- Remove team button
+- Team registration errors
+  - Member already belongs to a team
+  - Person creating team is not team lead --> what should we do?
+  - Is registration Open (Registration date and number of teams)
+  - Can Edit teams even if registration is closed due to max teams
+  - Person editing form is editing only the parts that they are allowed to.
+  - User submitting form must have listed themselves as a member of the team
+- api/admin for admin requests and there error handeling
+- team member was added on many teams as pending, member accepted one, all other
+  teams need notified that the member is no longer eligable to join their team
+- Team queue for teams to maybe get in if another team leaves. Empties the
+morning of hackathon.
+- Confirm that the user making changes to the team is authorized
+- Allow applications to be in a saved status
+- Record who registred the team/saved the team
+- Array of edits, who made an edit, when was the edit made, what fields were edited
+- When a team member confirms membership, remove them from all other teams. Also
+  remove any saved application they may have.
+- Person who registers team should be considered the team leader
+- Edge case, team leader leaves team and no other members are confirmed
+
+======================
+==== User Backlog ====
+======================
+- Remove Account --> make sure they aren't team leader
+- Try/Catch block for all user async await functions
+- Redirect user to the page they wanted after account creation.
+- Change password should send an email.
+
+
+==============================
+==== UI/UX Design Backlog ====
+==============================
+- User pages
+  - Error handeling design
+- Registration closed. No more edits, no more adding. Contact such and such
+  if you need something
+- Adding team members --> if member info window is open display warning before
+trying to add new member/edit existing member
+- Remove user during Registration
+- View team
+- Edit team
+- Resend verification email (account creation and team member invite)
+- What happens when countdown hits 0?
+- Should we have a counter for how many slots are remaining?
+- Reset Password, Change Password, and Verify Signup should all link back to
+  the homepage.
+- Reset Password and Verify Signup pages should show the user as logged in
+- Resend confirm account email option.
+- Forgot password should work even when user is logged in. Can have a link by
+  change password form.
+
+
+==================================
+==== UI Functionality Backlog ====
+==================================
+- Email use sendgrid

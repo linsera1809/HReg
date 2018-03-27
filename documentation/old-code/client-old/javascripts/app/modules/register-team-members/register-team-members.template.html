@@ -1,0 +1,70 @@
+<div class="team-members">
+  <div class="left-column">
+    <h5>Team Members</h5>
+    <ul>
+      <li ng-click="$ctrl.editMember($index)" ng-repeat="member in $ctrl.members">{{member.first}} {{member.last}}<img src="images/edit.svg" alt="Edit Member Icon"></li>
+      <li class="new-member" ng-click="$ctrl.newMember()"><img class="new-member" src="images/plus.svg" alt="New Member Icon">New Member</li>
+    </ul>
+  </div>
+  <div id="member-information" class="collapsable" >
+    <div class="right-column">
+      <!-- Personal Information -->
+      <div class="container">
+        <div class="member-information">
+          <h6><img src="/images/user.svg" alt="User Icon">Personal Information</h6>
+          <!-- First Name -->
+          <label for="first-name">First Name</label>
+          <input id="first-name" type="text" ng-model="$ctrl.tmpMember.first">
+          <!-- Last Name -->
+          <label for="last-name">Last Name</label>
+          <input id="last-name" type="text" ng-model="$ctrl.tmpMember.last">
+          <!-- Email -->
+          <label for="email">Nationwide Email</label>
+          <input id="email" type="text" ng-model="$ctrl.tmpMember.email">
+          <!-- Cell Phone -->
+          <label for="cell">Cell Phone</label>
+          <input id="cell" type="text" ng-model="$ctrl.tmpMember.cell">
+        </div>
+
+        <!-- Job -->
+        <div class="member-information">
+          <h6><img src="/images/briefcase.svg" alt="Briefcase Icon">Job Information</h6>
+          <!-- Job Title -->
+          <label for="job-title">Job Title</label>
+          <input id="job-title" type="text" ng-model="$ctrl.tmpMember.title">
+          <!-- Employment Type -->
+          <label for="employment-type">EmploymentType</label>
+          <select id="employment-type" ng-options="type for type in $ctrl.employmentTypes" ng-model="$ctrl.tmpMember.employmentType"></select>
+          <!-- Manager -->
+          <label for="manager">Manager</label>
+          <input id="manager" type="text" ng-model="$ctrl.tmpMember.manager">
+          <!-- Department -->
+          <label for="dept">Department</label>
+          <input id="dept" type="text" ng-model="$ctrl.tmpMember.dept">
+          <!-- Location -->
+          <label for="location">Location</label>
+          <select id="location" ng-options="location for location in $ctrl.locations" ng-model="$ctrl.tmpMember.location"></select>
+        </div>
+
+        <!-- Additional Information -->
+        <div class="member-information">
+          <h6><img src="/images/info.svg" alt="Information Icon">Additional Information</h6>
+          <!-- T-Shirt Size -->
+          <label for="tshirt">T-Shirt Size</label>
+          <select id="tshirt" ng-options="size for size in $ctrl.tshirtSizes" ng-model="$ctrl.tmpMember.tshirt"></select>
+          <!-- Team Role -->
+          <label for="allergies">Team Role</label>
+          <input id="allergies" type="text" ng-model="$ctrl.tmpMember.role">
+          <!-- Food Allergies -->
+          <label for="allergies">Food Allergies</label>
+          <textarea id="allergies" ng-model="$ctrl.tmpMember.allergies"></textarea>
+          <label for="notes">Notes</label>
+          <textarea id="notes" ng-model="$ctrl.tmpMember.notes"></textarea>
+        </div>
+      </div>
+
+      <button ng-click="$ctrl.addMember()">{{$ctrl.buttonText}}</button>
+      <button ng-click="$ctrl.collapse()">Cancel</button>
+    </div>
+  </div>
+</div>
